@@ -13,10 +13,6 @@ variables:
   buildConfiguration: 'Release'
 
 steps:
-- task: DotNetCoreCLI@2
-  displayName: 'Install dotnetsay'
-  inputs:
-    command: custom
-    projects: '**/*.csproj'
-    custom: tool
-    arguments: 'install -g dotnetsay'
+# ...
+# do this near the end of your pipeline in most cases
+- task: PublishBuildArtifacts@1
